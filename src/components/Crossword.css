@@ -1,0 +1,140 @@
+/* Example: index.css or a global stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffd1dc 0%, #ffe4e1 100%);
+  font-family: 'Dancing Script', cursive, sans-serif;
+}
+
+/* ====================== CROSSWORD SECTION ====================== */
+.crossword-section {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 650px;
+  border: 2px solid #ffc0cb; 
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255,192,203, 0.5); 
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s;
+  z-index: 1; 
+}
+.crossword-section:hover {
+  transform: scale(1.01);
+}
+
+/* Faint hearts in corners (optional) */
+.crossword-section::before,
+.crossword-section::after {
+  content: '♥';
+  position: absolute;
+  font-size: 3rem;
+  color: #ff6f91;
+  opacity: 0.1;
+}
+.crossword-section::before {
+  top: 10px;
+  left: 10px;
+}
+.crossword-section::after {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* HEADINGS AND TEXT */
+h2 {
+  color: #ff6f91;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+ol {
+  text-align: left;
+  margin: 0 auto;
+  padding: 0 0 0 1.2rem; /* small left padding for bullet indentation */
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #c2185b;
+}
+
+/* PUZZLE GRID */
+.puzzle-grid {
+  display: inline-block;
+  margin-top: 10px;
+}
+.puzzle-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* CELLS */
+.cell {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  box-sizing: border-box;
+  border: 1px solid #f8bccb;
+  background-color: #ffeef2; /* soft pink */
+}
+
+.cell.black-cell {
+  background-color: #f8bccb; 
+}
+
+/* CLUE LABELS */
+.clue-label {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: 0.7rem;
+  color: #888;
+}
+
+/* INPUTS */
+.cell-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  background: transparent;
+  color: #d81b60;
+}
+.cell-input:focus {
+  box-shadow: 0 0 6px #ffbdd0;
+}
+
+/* BUTTON */
+button {
+  background-color: #ff6f91;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 10px;
+  font-family: inherit;
+}
+button:hover {
+  background-color: #ff85a2;
+  transform: translateY(-2px);
+}
+button:active {
+  background-color: #ff577e;
+  transform: translateY(1px);
+}
+
+/* FEEDBACK */
+.feedback {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #d81b60;
+}

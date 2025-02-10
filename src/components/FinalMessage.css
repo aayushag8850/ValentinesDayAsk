@@ -1,0 +1,60 @@
+/* Example: entire page or container background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dancing Script', cursive, sans-serif;
+  background-color: #ffe4e1;
+  background-repeat: no-repeat, repeat;
+  background-size: cover, auto;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* The final message container */
+.final-section {
+  text-align: center;
+  padding: 40px;
+  position: relative;
+  min-height: 100vh;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.valentine-text {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #d81b60;
+}
+
+/* Button row styling */
+.button-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Basic button styles: bigger font, nice background, slight rounding */
+.yes-button, 
+.no-button {
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease; /* Smooth scale transitions */
+}
+
+/* Distinct colors for yes / no */
+.yes-button {
+  background-color: #aed581;  /* light green */
+  color: #fff;
+}
+.no-button {
+  background-color: #ef9a9a;  /* light pinkish red */
+  color: #fff;
+}

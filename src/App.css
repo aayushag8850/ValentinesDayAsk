@@ -1,0 +1,13 @@
+.app-container {
+  text-align: center;
+  min-height: 100vh;
+  background: #ffe4e1; /* Light pink */
+  padding-bottom: 50px;
+}
+
+.app-container h1 {
+  color: #c2185b;
+  margin: 0;
+  padding: 20px 0;
+  text-transform: uppercase;
+}

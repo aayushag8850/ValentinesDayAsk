@@ -1,0 +1,25 @@
+.quiz-section {
+    background: #fff;
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  
+  .quiz-question {
+    margin: 15px 0;
+    text-align: left;
+  }
+  
+  .quiz-option {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .feedback {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+  }
+  

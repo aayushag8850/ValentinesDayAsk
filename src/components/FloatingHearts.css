@@ -1,0 +1,97 @@
+/* 
+  FILM STRIP EDGES - PHOTO BOOTH STYLE
+*/
+
+/* Base container for each side strip */
+.film-edge {
+  position: fixed;
+  top: 0;
+  width: 110px;      /* narrower for a photo booth feel */
+  height: 100vh;     /* full vertical height */
+  overflow-y: auto;  /* scroll if there are many photos */
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.3); /* lightly translucent background */
+  backdrop-filter: blur(5px);                 /* slight blur effect behind the strip */
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* Left vs. right positioning */
+.film-edge-left {
+  left: 0;
+}
+.film-edge-right {
+  right: 0;
+}
+
+/* A small title or label at the top of each strip */
+.film-strip-title {
+  font-family: 'Dancing Script', cursive, sans-serif; /* or your favorite romantic font */
+  font-size: 1.2rem;
+  color: #c2185b;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Each "photo booth" frame: white background, black border, subtle shadow */
+.photobooth-frame {
+  width: 80px;                 /* slightly narrower than container */
+  margin-bottom: 15px;         /* space between frames */
+  background-color: #fff;
+  border: 2px solid #000;      /* thick black border for a photo booth vibe */
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  border-radius: 4px;          /* slightly rounded corners, optional */
+  padding: 4px;                /* small padding around image inside the border */
+  transition: transform 0.3s ease;
+}
+
+/* 
+  Optional: Perforation holes on the left & right edges 
+  to mimic the "tearaway" or "photo booth reel" style 
+*/
+.photobooth-frame::before,
+.photobooth-frame::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #000;     /* color of the hole */
+  border-radius: 50%;
+}
+.photobooth-frame::before {
+  left: -10px;
+}
+.photobooth-frame::after {
+  right: -10px;
+}
+
+/* Hover effect: "lift" the photo a bit */
+.photobooth-frame:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Images: fit inside the frame nicely */
+.photobooth-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px; /* optional, to match the frame’s corners */
+}
+
+/* Scrolling style */
+.film-edge::-webkit-scrollbar {
+  width: 6px;
+}
+.film-edge::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+.film-edge::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 4px;
+}
